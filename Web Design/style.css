@@ -1,93 +1,296 @@
-body {
-  background-color: #ffffff;
-  font-family: Arial, sans-serif;
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+body {
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  height: 60px;
+  background: linear-gradient(180deg, rgba(185, 158, 116, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%);
+  box-shadow: 0px 4px 19px 0px rgba(0, 0, 0, 0.9) inset 50%, 0px 4px 4px 1px rgba(0, 0, 0, 0.3) 90%;
+  backdrop-filter: blur(5px);
+  z-index: 9999;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar li {
+  margin: 10px;
+}
+
+.navbar a,
+.dropdown {
+  text-decoration: none;
+  color: #ffffff;
+  text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+}
+
+.dropbtn {
+  font-size: 16px;
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+}
+
+.dropdown {
+  overflow: hidden;
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn .dropdown-content a:hover {
+  text-decoration: underline;
+}
+
+.dropdown-content {
+  justify-content: center;
+  display: none;
+  position: absolute;
+  height: 280px;
+  min-width: 130px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.7) 100%);
+  border-radius: 4px 4px 0px 0px;
+  box-shadow: 0px 4px 19px 0px rgba(0, 0, 0, 0.7) inset, 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(20px);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  text-decoration: none;
+  color: #ffffff;
+  text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+  padding: 11px 12px;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.para1 {
+  background-image: url('/Web Design/images/test-1.png');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 92vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+
+.parallax-content {
+  padding-bottom: 10vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+
+
+.parallax-content h2,
+.parallax-content p {
+  padding: 0 20px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+video {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7;
+  z-index: -1;
+}
+
+.content {
+  padding: 9vh 9vw;
+}
+
+.video-content {
+  padding-bottom: 100vh;
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    top: 0;
+  }
+
+  .dropdown-content {
+    margin-top: 10px;
+  }
+
+  .agenda-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+  }
+
+  .event {
+    flex-basis: calc(50% - 40px);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    bottom: 0;
+
+  }
+
+  .navbar li {
+    padding: 10px 0;
+  }
+
+  .dropdown-content {
+    bottom: 100%;
+    background: linear-gradient(rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.7) 0%);
+
+  }
+
+  .image-box {
+    width: 100%;
+  }
+
+  .image-text {
+    position: absolute;
+    bottom: 2.5vh;
+    left: 2.5vh;
+    color: #fff;
+    font-size: 1em;
+    font-weight: bold;
+
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  }
+
+  .agenda-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .event {
+    flex-basis: calc(50% - 40px);
+  }
+}
+
+@media (min-width: 576px) {}
+
+
+
+@media screen and (min-width: 1024px) {
+
+  .event {
+    flex-basis: calc(33.33% - 40px);
+  }
+}
+
+section #agenda {
+  background-color: #4B6491;
+  color: #fff;
+}
+
+.agenda-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 9vh 9vw;
+}
+
+.agenda-description, .agenda-heading{
+  padding: 1vw 2vh;
+}
+
+.agenda-heading h3{
+  font-size: larger;
+}
+
+.event {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+section #events {
+  background-color: cadetblue;
+  color: #fff;
+}
+
+#events h2{
+  padding:  9vw;
+}
 
 .container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-evenly;
+  max-width: 100%;
+  padding: 9vw;
 }
 
-h1 {
-  text-align: center;
-}
-
-.column {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 10px;
-  margin-top: 20px;
-}
-
-.column-item {
-  border: 1px solid #ccc;
-  padding: 10px;
-  text-align: center;
-}
-
-.desc_1 {
-  margin-top: 20px;
-  border: 1px solid #ccc;
-  padding: 10px;
-  border-radius: 10px;
-}
-
-.desc_2 {
-  background-color: rgba(162, 126, 67, 0.81);
-  ;
-  margin-top: 20px;
-  border: 1px solid #ccc;
-  padding: 10px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px -94px 100px 6px rgba(0, 0, 0, 0.47);
-  border-radius: 10px;
-}
-
-
-.mobile-container {
-  max-width: 480px;
-  margin: auto;
-  background-color: #555;
-  height: 500px;
-  color: white;
-  border-radius: 10px;
-}
-
-.nav {
-  overflow: hidden;
-  background-color: #333;
+.image-box {
+  width: calc(30%);
+  margin-bottom: 20px;
   position: relative;
 }
 
-.nav #myLinks {
-  display: none;
+.image-box a {
+  display: block;
+  position: relative;
 }
 
-.nav a {
-  color: white;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  display: block;
+.image-box:hover {
+  transform: scale(1.025);
 }
 
-.nav a.icon {
-  background: black;
-  display: block;
+.image-box img {
+  transition: transform 0.9s ease;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.image-text {
   position: absolute;
-  right: 0;
-  top: 0;
-}
-
-.topnav a:hover {
-  background-color: #ffffff;
-  color: black;
-}
-
-.active {
-  background-color: #0c6;
-  color: white;
+  bottom: 2.5vh;
+  left: 2.5vh;
+  color: #fff;
+  font-size: 1em;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
