@@ -5,7 +5,7 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-  <nav class="navbar">
+  <nav class="navbar" id="regularNavbar">
     <ul>
       <div class="dropdown">
         <button class="dropbtn"><li><a href="index.html">Home</a></li></button>
@@ -24,8 +24,33 @@
     </ul>
   </nav>
 
-  <div class="para1">
-    <h2>Welcome to the Recipe Page!</h2>
+  <nav class="hamburger-navbar" id="hamburgerNavbar">
+    <div id="menuToggle">
+      <input type="checkbox" />
+      <span></span>
+      <span></span>
+      <span></span>
+
+      <ul id="menu">
+        <div class="dropdown">
+          <button class="dropbtn"><li><a class="active" href="index.html">Home</a></li></button>
+          <div class="dropdown-content">
+            <li><a href="#events">Events</a></li>
+            <li><a href="#floorplan">Floorplan</a></li>
+            <li><a href="#agenda">Agenda</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </div>
+        </div>
+        <li><a href="index2.html">Food</a></li>
+        <li><a href="index3.html">Fashion</a></li>
+        <li><a href="index4.html">Product</a></li>
+        <li><a class="active" href="index5.html">Technology</a></li>
+        <li><a href="#">Modification</a></li>
+    </div>
+  </nav>
+
+  <div class="para4">
+    <h2>Welcome to the Technology Page!</h2>
     <p>Discover delicious recipes and cooking tips.</p>
   </div>
 
