@@ -1,9 +1,15 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Recipe Page</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-</head>
+<html lang="en">
+  <head>
+    <title>Food Page</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500&family=Darker+Grotesque:wght@500&family=Merriweather+Sans&family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
 <body>
   <nav class="navbar" id="regularNavbar">
     <ul>
@@ -18,9 +24,20 @@
       </div>
       <li><a class="active" href="index2.html">Food</a></li>
       <li><a href="index3.html">Fashion</a></li>
-      <li><a href="index4.html">Design</a></li>
-      <li><a href="index5.html">Technology</a></li>
-      <li><a href="#">Modification</a></li>
+      <div class="dropdown">
+        <button class="dropbtn"><li><a href="index4.html">Design</a></li></button>
+        <div class="dropdown-content">
+          <li><a href="index4.html#About">Product</a></li>
+          <li><a href="index4.html#Recipe1">Design & Visual Communication</a></li>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn"><li><a href="index5.html">Technology</a></li></button>
+        <div class="dropdown-content">
+          <li><a href="index4.html#About">Computer Science</a></li>
+          <li><a href="index4.html#Recipe1">Animation & Motion Graphics</a></li>
+        </div>
+      </div>
     </ul>
   </nav>
 
@@ -45,16 +62,15 @@
         <li><a href="index3.html">Fashion</a></li>
         <li><a href="index4.html">Design</a></li>
         <li><a href="index5.html">Technology</a></li>
-        <li><a href="#">Modification</a></li>
     </div>
   </nav>
 
-  <div class="para1 parallax-content">
+  <div id="food-text" class="para1 parallax-content">
     <h2>Welcome to the Recipe Page!</h2>
     <p>Discover delicious recipes and cooking tips.</p>
   </div>
 
-  <section id="About" class="content">
+  <section id="About food-text" class="content">
     <h2>About</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel nisi ullamcorper, blandit nulla in, bibendum est. Nulla nec ligula non nisl venenatis blandit.</p>
   </section>
