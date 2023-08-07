@@ -8,15 +8,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500&family=Darker+Grotesque:wght@500&family=Merriweather+Sans&family=Oswald:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500&family=Darker+Grotesque:wght@500&family=Merriweather+Sans&family=Oswald:wght@300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <nav class="navbar" id="regularNavbar">
+  <nav class="navbar">
     <ul>
       <div class="dropdown">
-        <button class="dropbtn"><li><a class="active" href="index.html">Home</a></li></button>
+        <button class="dropbtn"><li><a id="active" href="index.html">Home</a></li></button>
         <div class="dropdown-content">
           <li><a href="#events">Events</a></li>
           <li><a href="#floorplan">Floorplan</a></li>
@@ -31,9 +31,9 @@
     </ul>
   </nav>
 
-  <nav class="hamburger-navbar" id="hamburgerNavbar">
+  <nav class="hamburger-navbar">
     <div id="menuToggle">
-      <input type="checkbox" />
+      <input type="checkbox">
       <span></span>
       <span></span>
       <span></span>
