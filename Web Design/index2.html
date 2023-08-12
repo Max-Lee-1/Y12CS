@@ -1,35 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Food Page</title>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-  </head>
+
+<head>
+  <title>Food Page</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+
 <body>
-  <nav class="navbar" id="">
+  <nav class="navbar">
     <ul>
       <div class="dropdown">
-        <button class="dropbtn"><li><a href="index.html">Home</a></li></button>
+        <button class="dropbtn">
+          <li><a href="index.html">Home</a></li>
+        </button>
         <div class="dropdown-content">
           <li><a href="index.html#events">Events</a></li>
-          <li><a href="#floorplan">Floorplan</a></li>
-          <li><a href="#agenda">Agenda</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="index.html#agenda">Agenda</a></li>
+          <li><a href="index.html#floorplan">Floorplan</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
         </div>
       </div>
       <li><a id="active" href="index2.html">Food</a></li>
       <li><a href="index3.html">Fashion</a></li>
       <div class="dropdown">
-        <button class="dropbtn"><li><a href="index4.html">Design</a></li></button>
+        <button class="dropbtn">
+          <li><a href="index4.html">Design</a></li>
+        </button>
         <div class="dropdown-content">
           <li><a href="index4.html#About">Product</a></li>
           <li><a href="index4.html#Recipe1">Design & Visual Communication</a></li>
         </div>
       </div>
       <div class="dropdown">
-        <button class="dropbtn"><li><a href="index5.html">Technology</a></li></button>
+        <button class="dropbtn">
+          <li><a href="index5.html">Technology</a></li>
+        </button>
         <div class="dropdown-content">
           <li><a href="index4.html#About">Computer Science</a></li>
           <li><a href="index4.html#Recipe1">Animation & Motion Graphics</a></li>
@@ -38,48 +47,69 @@
     </ul>
   </nav>
 
-  <nav class="hamburger-navbar" id="hamburgerNavbar">
+  <nav class="hamburger-navbar">
     <div id="menuToggle">
-      <input type="checkbox" />
+      <input type="checkbox">
       <span></span>
       <span></span>
       <span></span>
 
       <ul id="menu">
         <div class="dropdown">
-          <button class="dropbtn"><li><a href="index.html">Home</a></li></button>
+          <button class="dropbtn">
+            <li><a href="index.html">Home</a></li>
+          </button>
           <div class="dropdown-content">
             <li><a href="index.html#events">Events</a></li>
-            <li><a href="index.html#floorplan">Floorplan</a></li>
             <li><a href="index.html#agenda">Agenda</a></li>
+            <li><a href="index.html#floorplan">Floorplan</a></li>
             <li><a href="index.html#contact">Contact</a></li>
           </div>
         </div>
         <li><a id="active" href="index2.html">Food</a></li>
         <li><a href="index3.html">Fashion</a></li>
-        <li><a href="index4.html">Design</a></li>
-        <li><a href="index5.html">Technology</a></li>
-    </div>
+        <div class="dropdown">
+          <button class="dropbtn">
+            <li><a href="index4.html">Design</a></li>
+          </button>
+          <div class="dropdown-content">
+            <li><a href="index4.html#About">Product</a></li>
+            <li><a href="index4.html#Recipe1">Design & Visual Communication</a></li>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">
+            <li><a href="index5.html">Technology</a></li>
+          </button>
+          <div class="dropdown-content">
+            <li><a href="index4.html#About">Computer Science</a></li>
+            <li><a href="index4.html#Recipe1">Animation & Motion Graphics</a></li>
+          </div>
+        </div>
+      </ul>
   </nav>
 
-  <div id="food-text" class="para1 parallax-content">
+  <div class="para" style="background-image: url('./images/food-2.jpg');">
     <h2>Welcome to the Recipe Page!</h2>
     <p>Discover delicious recipes and cooking tips.</p>
   </div>
 
   <section id="About food-text" class="content">
     <h2>About</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel nisi ullamcorper, blandit nulla in, bibendum est. Nulla nec ligula non nisl venenatis blandit.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel nisi ullamcorper, blandit nulla in, bibendum
+      est. Nulla nec ligula non nisl venenatis blandit.</p>
   </section>
 
   <section id="Recipe1" class="content">
     <h2>Recipe 1</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel nisi ullamcorper, blandit nulla in, bibendum est. Nulla nec ligula non nisl venenatis blandit.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel nisi ullamcorper, blandit nulla in, bibendum
+      est. Nulla nec ligula non nisl venenatis blandit.</p>
   </section>
-    
+
   <section id="Recipe2" class="content">
     <h2>Recipe 2</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel nisi ullamcorper, blandit nulla in, bibendum est. Nulla nec ligula non nisl venenatis blandit.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel nisi ullamcorper, blandit nulla in, bibendum
+      est. Nulla nec ligula non nisl venenatis blandit.</p>
   </section>
 
   <section id="services" class="content">
@@ -88,7 +118,8 @@
       standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
       type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
       remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-      Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of
+      Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+      of
       Lorem Ipsum.</p>
   </section>
 
@@ -98,7 +129,8 @@
       standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
       type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
       remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-      Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of
+      Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+      of
       Lorem Ipsum.</p>
   </section>
 
@@ -108,9 +140,11 @@
       standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
       type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
       remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-      Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of
+      Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+      of
       Lorem Ipsum.</p>
   </section>
 
 </body>
+
 </html>
