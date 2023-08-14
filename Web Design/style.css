@@ -18,6 +18,7 @@ body {
   box-shadow: 0px 4px 19px 0px rgba(0, 0, 0, 0.9) inset 50%, 0px 4px 4px 1px rgba(0, 0, 0, 0.3) 90%;
   backdrop-filter: blur(5px);
   z-index: 9999;
+  height: 100px;
 }
 
 .navbar ul {
@@ -25,36 +26,31 @@ body {
   list-style: none;
 }
 
-.navbar li a {
+.navbar a {
+  font-family: 'Darker Grotesque', sans-serif, bold;
+  font-size: 32px;
   display: block;
-  padding: 2vh 2vw;
-}
-
-#regularNavbar.navbar a,
-.dropdown {
+  padding: 36px 1vw;
+  color: #fff;
+  text-shadow: 0 1px 0 black;
   text-decoration: none;
-  color: #ffffff;
-  text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
 }
 
-#regularNavbar .active {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 50%, rgba(255, 255, 255, 0.1) 100%);
+#active {
+  /*background: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 50%, rgba(255, 255, 255, 0.1) 100%);*/
+  text-decoration: underline;
 }
 
-#regularNavbar .dropbtn {
-  font-size: 16px;
+.dropbtn {
   background-color: transparent;
   border: none;
-  color: #ffffff;
-  text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
 }
 
 .dropdown {
   overflow: hidden;
 }
 
-.navbar a:hover,
-.dropdown:hover .dropbtn .dropdown-content a:hover {
+.navbar a:hover, .dropdown:hover, .dropdown-content a:hover {
   text-decoration: underline;
 }
 
@@ -62,40 +58,37 @@ body {
   justify-content: center;
   display: none;
   position: absolute;
-  height: 280px;
-  min-width: 130px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.7) 100%);
+  min-width: 150px;
+  background: linear-gradient(180deg, rgba(185, 158, 116, 0.1) 0%, rgba(255, 255, 255, 0.677) 100%);
+  /*background: linear-gradient(180deg, rgba(255, 255, 255, 0.677) 0%, rgba(185, 158, 116, 0.1) 90%);*/
   border-radius: 4px 4px 0px 0px;
-  box-shadow: 0px 4px 19px 0px rgba(0, 0, 0, 0.7) inset, 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(20px);
   z-index: 1;
+  backdrop-filter: blur(5px);
 }
 
-.dropdown-content a {
-  float: none;
-  text-decoration: none;
-  color: #ffffff;
-  text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
-  padding: 1vh 0vw;
-  display: block;
+.dropdown-content li a {
+  font-family: 'Darker Grotesque', sans-serif, bold 300;
+  padding: 2vh ;
+  font-size: 24px;
+  text-align: left;
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-
-.hamburger-navbar{
+.hamburger-navbar {
   display: none;
 }
 
 .para1 {
-  background-image: url('/Web Design/images/food-2.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.3),
+  rgba(0, 0, 0, 0.1)), url('/Web Design/images/food-2.jpg');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 92vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -106,12 +99,13 @@ body {
 }
 
 .para2 {
-  background-image: url('/Web Design/images/fashion-2.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.3),
+  rgba(0, 0, 0, 0.1)), url('/Web Design/images/fashion-2.jpg');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 92vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -122,12 +116,13 @@ body {
 }
 
 .para3 {
-  background-image: url('/Web Design/images/product-2.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.3),
+  rgba(0, 0, 0, 0.1)), url('/Web Design/images/product-2.jpg');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 92vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -138,19 +133,21 @@ body {
 }
 
 .para4 {
-  background-image: url('/Web Design/images/technology-1.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.3),
+  rgba(0, 0, 0, 0.1)), url('/Web Design/images/technology-1.jpg');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 92vh;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   color: #fff;
   text-align: center;
   opacity: 0.8;
+}
+
+.para4 img {
+  margin-top: 0;
 }
 
 .parallax-content {
@@ -166,17 +163,26 @@ body {
   align-items: center;
   color: #fff;
   text-align: center;
+  text-shadow: 0 1px 0 black;
+  font-size: 32px;
+  padding: 0 9vw;
+  max-width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 
 .parallax-content h2,
-.parallax-content p {
-  padding: 0 20px;
-  max-width: 100%;
-  margin: 0 auto;
+.parallax-content p {}
+
+#food-text {
+  font-family: 'Barlow Condensed', sans-serif;
 }
 
 video {
+  background: linear-gradient(rgba(0, 0, 0, 0.3),
+  rgba(0, 0, 0, 0.1));
   position: absolute;
   top: 0;
   left: 50%;
@@ -199,17 +205,18 @@ video {
 @media (min-width: 768px) {
   .navbar {
     top: 0;
-  }
+}
 
-  .dropdown-content {
-    margin-top: 10px;
+  .image-box {
+    width: calc(30%);
+    margin-bottom: 20px;
+    position: relative;
   }
 
   .agenda-container {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-
   }
 
   .event {
@@ -223,12 +230,14 @@ video {
     display: none;
   }
 
-  .hamburger-navbar{
+  .hamburger-navbar {
     display: block;
   }
 
   .image-box {
-    width: 100%;
+    width: calc(30%);
+    margin-bottom: 20px;
+    position: relative;
   }
 
   .image-text {
@@ -238,11 +247,11 @@ video {
     color: #fff;
     font-size: 1em;
     font-weight: bold;
-
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
   }
 
   .agenda-container {
+    width: calc(33%);
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -251,10 +260,23 @@ video {
   .event {
     flex-basis: calc(50% - 40px);
   }
+
 }
 
-@media (min-width: 576px) {}
+@media screen and (max-width: 576px) {
+  .image-box {
+    width: calc(45%);
+    margin-bottom: 20px;
+    position: relative;
+  }
 
+}
+
+@media screen and (max-width: 376px) {
+  .image-box {
+    width: calc(100%);
+  }
+}
 
 
 @media screen and (min-width: 1024px) {
@@ -265,37 +287,36 @@ video {
 }
 
 section #agenda {
-  background-color: #4B6491;
+  background-color: #374B7F;
   color: #fff;
 }
 
 .agenda-container {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
   padding: 9vh 9vw;
 }
 
-.agenda-description, .agenda-heading{
+#agenda-description,
+#agenda-heading {
   padding: 1vw 2vh;
 }
 
-.agenda-heading h3{
-  font-size: larger;
-}
+#agenda-heading h3 {}
 
-.event {
+.box {
   border: 1px solid #ccc;
-  padding: 10px;
+  border-radius: 8px;
 }
 
 section #events {
-  background-color: cadetblue;
+  background-color: #2F5354;
   color: #fff;
 }
 
-#events h2{
-  padding:  9vw;
+.event-content {
+  padding-left: 9vw;
+  padding-right: 9vw;
+  padding-top: 12vh;
 }
 
 .container {
@@ -305,12 +326,6 @@ section #events {
   align-content: space-evenly;
   max-width: 100%;
   padding: 9vw;
-}
-
-.image-box {
-  width: calc(30%);
-  margin-bottom: 20px;
-  position: relative;
 }
 
 .image-box a {
@@ -336,27 +351,19 @@ img {
 }
 
 .image-text {
+  font-family: 'Merriweather Sans', sans-serif;
   position: absolute;
-  bottom: 2.5vh;
-  left: 2.5vh;
+  bottom: 2vh;
+  left: 2vh;
   color: #fff;
-  font-size: 1em;
+  font-size: 16px;
   font-weight: bold;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.8);
+  background-color: rgba(128, 128, 128, 0.45);
+  border-radius: 9px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 6px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*icon*/
 #menuToggle {
@@ -368,26 +375,27 @@ img {
   padding: 3vh;
   right: 0;
 }
- 
+
 #menuToggle a {
   text-decoration: none;
   color: #232323;
   transition: color 0.3s ease;
 }
- 
+
 #menuToggle a:hover {
   text-decoration: underline;
 }
- 
+
 #menuToggle input {
   display: block;
   width: 40px;
   height: 32px;
   position: absolute;
-  padding: 3vh; /* Remember to follow #MenuToggle Padding*/
+  padding: 3vh;
+  /* Remember to follow #MenuToggle Padding*/
   cursor: pointer;
   opacity: 0;
-  z-index: 2; 
+  z-index: 2;
   -webkit-touch-callout: none;
 }
 
@@ -399,36 +407,37 @@ img {
   position: relative;
   background: #fff;
   border: 1px solid #232323;
+  /*border-bottom: 1px solid #232323;*/
   border-radius: 3px;
   z-index: 1;
   transform-origin: 4px 0px;
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
     background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
 }
- 
+
 #menuToggle span:first-child {
   transform-origin: 0% 0%;
 }
- 
+
 #menuToggle span:nth-last-child(2) {
   transform-origin: 0% 100%;
 }
 
-#menuToggle input:checked ~ span {
+#menuToggle input:checked~span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
   background: #232323;
 }
 
-#menuToggle input:checked ~ span:nth-last-child(3) {
+#menuToggle input:checked~span:nth-last-child(3) {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-#menuToggle input:checked ~ span:nth-last-child(2) {
+#menuToggle input:checked~span:nth-last-child(2) {
   transform: rotate(-45deg) translate(0, -1px);
 }
- 
+
 #menu {
   position: absolute;
   width: 200px;
@@ -436,38 +445,39 @@ img {
   margin: -100px 0 0 -100px;
   padding: 50px;
   padding-top: 125px;
-  background: linear-gradient(180deg, rgba(185, 158, 116, 0.1) 0%, rgba(255, 255, 255, 0.677) 100%);
+  background: linear-gradient(180deg, rgba(185, 158, 116, 0.1) 0%, rgb(255, 255, 255) 100%);
+  backdrop-filter: blur(5px);
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
-  display: flex; /* Use flexbox for the menu items */
-  flex-direction: column; /* Stack the menu items vertically */
-  justify-content: flex-start; /* Align the menu items to the top (right-aligned) */
-  align-items: flex-end; /* Align the menu items to the right */
+  display: flex;
+  /* Use flexbox for the menu items */
+  flex-direction: column;
+  /* Stack the menu items vertically */
+  justify-content: flex-start;
+  /* Align the menu items to the top (right-aligned) */
+  align-items: flex-end;
+  /* Align the menu items to the right */
   transform-origin: 100% 0%;
   transform: translate(100%, 0);
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
- 
+
 #menu li {
   padding: 2vh 3vw;
   font-size: 22px;
-  text-align: right;
+  text-align: left;
 }
- 
+
 /*
  * And let's slide it in from the left
  */
-#menuToggle input:checked ~ ul {
+#menuToggle input:checked~ul {
   transform: none;
 }
 
-#menu .active{
-  text-decoration: underline;
-}
-
-#menu .dropbtn, .dropdown{
+#menu .dropbtn,
+.dropdown {
   background: none;
   border: none;
 }
-

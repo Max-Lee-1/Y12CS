@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<header>
+<head>
+  <title>Home Page</title>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500&family=Darker+Grotesque:wght@500&family=Merriweather+Sans&family=Oswald:wght@300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+</head>
 
 <body>
-  <nav class="navbar" id="regularNavbar">
+  <nav class="navbar">
     <ul>
       <div class="dropdown">
-        <button class="dropbtn"><li><a class="active" href="index.html">Home</a></li></button>
+        <button class="dropbtn"><li><a id="active" href="index.html">Home</a></li></button>
         <div class="dropdown-content">
           <li><a href="#events">Events</a></li>
           <li><a href="#floorplan">Floorplan</a></li>
@@ -21,15 +26,14 @@
       </div>
       <li><a href="index2.html">Food</a></li>
       <li><a href="index3.html">Fashion</a></li>
-      <li><a href="index4.html">Product</a></li>
+      <li><a href="index4.html">Design</a></li>
       <li><a href="index5.html">Technology</a></li>
-      <li><a href="#">Modification</a></li>
     </ul>
   </nav>
 
-  <nav class="hamburger-navbar" id="hamburgerNavbar">
+  <nav class="hamburger-navbar">
     <div id="menuToggle">
-      <input type="checkbox" />
+      <input type="checkbox">
       <span></span>
       <span></span>
       <span></span>
@@ -46,9 +50,8 @@
         </div>
         <li><a href="index2.html">Food</a></li>
         <li><a href="index3.html">Fashion</a></li>
-        <li><a href="index4.html">Product</a></li>
+        <li><a href="index4.html">Design</a></li>
         <li><a href="index5.html">Technology</a></li>
-        <li><a href="#">Modification</a></li>
     </div>
   </nav>
 
@@ -61,37 +64,29 @@
       </video>
     </div>
 
-  <section>
-    <div id="events">
-      <h2>Events</h2>
-      <div class="container">
-        <div class="image-box">
-          <a href="index-recipe.html">
-            <img src="/Web Design/images/food-1-edited.jpg" alt="Image 1">
-            <div class="image-text">Food</div>
-          </a>
+    <section>
+      <div id="events">
+        <div class="event-content">
+          <h2>Events</h2>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+            standard dummy text ever since</p>
         </div>
-        <div class="image-box">
-          <a href="index-fashion.html">
-            <img src="/Web Design/images/fashion-1-edited.jpg" alt="Image 2">
-            <div class="image-text">Fashion</div>
-          </a>
-        </div>
-        <div class="image-box">
-          <a href="index-product.html">
-            <img src="/Web Design/images/product-1-edited.jpg" alt="Image 1">
-            <div class="image-text">Product</div>
-          </a>
-        </div>
-        <div class="image-box">
-          <a href="index-technology.html">
-            <img src="/Web Design/images/robotics-1-edit.jpg" alt="Image 2">
-            <div class="image-text">Technology</div>
-          </a>
+        <div class="container">
+          <div class="image-box"><a href="index2.html"><img src="/Web Design/images/food-1-edited.jpg" alt="Image 1"><div
+                class="image-text">Food</div></a></div>
+          <div class="image-box"><a href="index3.html"><img src="/Web Design/images/fashion-1-edited.jpg" alt="Image 2"><div
+                class="image-text">Fashion</div></a></div>
+          <div class="image-box"><a href="index4.html"><img src="/Web Design/images/product-1-edited.jpg" alt="Image 1"><div
+                class="image-text">Product</div></a></div>
+          <div class="image-box"><a href="index5.html"><img src="/Web Design/images/dvc_2-edited.jpg" alt="Image 2"><div
+                class="image-text">Design & Visual Communication</div></a></div>
+          <div class="image-box"><a href="index5.html"><img src="/Web Design/images/robotics-1-edit.jpg" alt="Image 2"><div
+                class="image-text">Computer Science</div></a></div>
+          <div class="image-box"><a href="index5.html"><img src="/Web Design/images/amg_1-edited.jpg" alt="Image 2"><div
+                class="image-text">Animation & Motion Graphics</div></a></div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
   
 
   <section id="about" class="content">
@@ -107,14 +102,22 @@
   <section>
     <div id="agenda">
       <div class="agenda-container">
-        <div class="event">
-            <h3 class="agenda-heading">18:00 - 19:00</h3>
-            <p class="agenda-description">Event description goes here...</p>
+        <div class="box">
+            <h3 id="agenda-heading">18:00 - 19:00</h3>
+            <p id="agenda-description">Fashion Showcase</p>
         </div>
-        <div class="event">
-            <h3 class="agenda-heading">19:00 - 20:00</h3>
-            <p class="agenda-description">Event description goes here...</p>
+        <div class="box">
+            <h3 id="agenda-heading">19:00 - 20:00</h3>
+            <p id="agenda-description">Food Showcase</p>
         </div>
+        <div class="box">
+          <h3 id="agenda-heading">20:00 - 21:00</h3>
+          <p id="agenda-description">Fashion Showcase</p>
+      </div>
+      <div class="box">
+          <h3 id="agenda-heading">21:00 - 22:00</h3>
+          <p id="agenda-description">Food Showcase</p>
+      </div>
       </div>
     </div>
   </section>

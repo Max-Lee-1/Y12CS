@@ -1,11 +1,17 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Recipe Page</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-</head>
+<html lang="en">
+  <head>
+    <title>Design Page</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500&family=Darker+Grotesque:wght@500&family=Merriweather+Sans&family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
 <body>
-  <nav class="navbar" id="regularNavbar">
+  <nav class="navbar">
     <ul>
       <div class="dropdown">
         <button class="dropbtn"><li><a href="index.html">Home</a></li></button>
@@ -18,15 +24,14 @@
       </div>
       <li><a href="index2.html">Food</a></li>
       <li><a href="index3.html">Fashion</a></li>
-      <li><a class="active" href="index4.html">Product</a></li>
+      <li><a id="active" href="index4.html">Design</a></li>
       <li><a href="index5.html">Technology</a></li>
-      <li><a href="#">Modification</a></li>
     </ul>
   </nav>
 
-  <nav class="hamburger-navbar" id="hamburgerNavbar">
+  <nav class="hamburger-navbar">
     <div id="menuToggle">
-      <input type="checkbox" />
+      <input type="checkbox">
       <span></span>
       <span></span>
       <span></span>
@@ -43,13 +48,12 @@
         </div>
         <li><a href="index2.html">Food</a></li>
         <li><a href="index3.html">Fashion</a></li>
-        <li><a class="active" href="index4.html">Product</a></li>
+        <li><a id="active" href="index4.html">Design</a></li>
         <li><a href="index5.html">Technology</a></li>
-        <li><a href="#">Modification</a></li>
     </div>
   </nav>
 
-  <div class="para3" style="color: black;">
+  <div class="para3 parallax-content">
     <h2>Welcome to the Product Page!</h2>
     <p>Discover delicious recipes and cooking tips.</p>
   </div>
