@@ -38,10 +38,7 @@
 
 <body>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="path/to/ScrollSmoother.min.js"></script>
-    <script src="path/to/ScrollTrigger.min.js"></script>
-    <script src="script.js"></script>
+    
 
 
     <section id="content">
@@ -97,4 +94,19 @@
             <div></div>
             <div></div>
            </div> -->
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="path/to/ScrollSmoother.min.js"></script>
+    <script src="path/to/ScrollTrigger.min.js"></script>
+    <script src="main.js"></script>-->
+    <script>
+        gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+        const smoother = ScrollSmoother.create({
+        content: ".content",
+        smooth: 3,
+        effects: true
+        });
+
+        smoother.effects("img", { speed: "auto" });
+    </script>
 </body>

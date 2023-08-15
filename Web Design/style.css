@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400&family=Merriweather+Sans&family=Merriweather:ital@1&display=swap');
+/*@import url('./css/footer-style.css');*/
 
 * {
   box-sizing: border-box;
@@ -30,8 +31,8 @@ p {
   justify-content: space-around;
   align-items: center;
   background: linear-gradient(to bottom, rgba(6, 25, 58, 0.9), rgba(10, 41, 94, 0.7));
-  box-shadow: 0px 4px 19px 0px rgba(0, 0, 0, 0.9) inset 50%, 0px 4px 4px 1px rgba(0, 0, 0, 0.3) 90%;
-  backdrop-filter: blur(5px);
+  box-shadow: 0px 4px 19px 0px rgba(0, 0, 0, 0.9) inset 50%, 0px 4px 4px 1px rgb(0, 0, 0) 90%;
+  backdrop-filter: blur(10px);
   z-index: 9999;
   height: 15vh;
 }
@@ -389,6 +390,7 @@ section #agenda {
 /*floorplan*/
 section #floorplan {
   background: linear-gradient(180deg, rgba(52, 71, 120), rgb(10, 41, 94) 100%);
+  padding-bottom: 18vh;
 }
 
 #floorplan .container {
@@ -498,4 +500,60 @@ section #floorplan {
   .event {
     flex-basis: calc(33.33% - 40px);
   }
+}
+
+/* Style for the footer section */
+.footer-07 {
+  background-color: #292931;
+  color: #ffffff;
+  padding: 60px 0;
+}
+
+/* Center the content */
+.container {
+}
+
+/* Style for the footer heading (logo) */
+.footer-heading a {
+  display: flex;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Style for the menu links */
+.menu a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+  padding: 2vh 2vw;
+}
+
+.menu a:hover {
+  color: #6290e4;
+}
+
+/* Style for the social media icons */
+.ftco-footer-social {
+  list-style: none;
+  padding: 0;
+}
+
+.ftco-footer-social li {
+  display: inline-block;
+}
+
+/* Style for the social media icons */
+.ftco-footer-social a {
+  color: #ffffff;
+  font-size: 24px;
+  transition: color 0.3s;
+}
+
+.ftco-footer-social a:hover {
+  color: #0a295e;
+}
+
+/* Style for the copyright text */
+.copyright {
 }
