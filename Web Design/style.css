@@ -9,17 +9,17 @@
 
 body {
   font-family: 'Merriweather Sans', serif;
-  background-color: rgb(10, 41, 94);
+  background: rgb(10, 41, 94);
   color: #fff;
   overflow-x: hidden;
   width: 100vw;
 }
 
-h2 {
+h2{
   font-size: 28px;
 }
 
-p {
+p{
   font-size: 18px;
 }
 
@@ -225,7 +225,6 @@ p {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
   max-width: 100vw;
   display: flex;
   flex-direction: column;
@@ -236,13 +235,40 @@ p {
   text-shadow: 0 1px 0 black;
   padding: 0 9vw;
 }
-
 .para h2 {
+  padding-top: 40vh;
   font-size: 60px;
 }
 
 .para p {
   font-size: 42px;
+  padding-bottom: 42vh;
+}
+
+.para .row{
+  padding-bottom: 2rem;
+}
+
+.para .row h2 {
+  padding-top: 1rem;
+}
+
+.para-content h2{
+  font-size: 28px;
+  padding-bottom: 1rem;
+}
+
+.para-content p{
+  font-size: 18px;
+  padding-bottom: 1rem;
+}
+
+.para-content{
+  background: rgba(0, 0, 0, 0.5); 
+  backdrop-filter: blur(5px);
+  width: 100vw;
+  color: white;
+  text-align: center;
 }
 
 video {
@@ -259,7 +285,7 @@ video {
   z-index: -1;
 }
 
-.content {
+.content, .para-content {
   padding: 9vh 9vw;
 }
 
@@ -483,6 +509,14 @@ section #floorplan {
 
   .para p {
     font-size: 28px;
+  }
+
+  .para-content h2{
+    font-size: 36px;
+  }
+  
+  .para-content p{
+    font-size: 20px;
   }
 
   #floorplan img {
