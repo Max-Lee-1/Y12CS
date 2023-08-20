@@ -15,11 +15,11 @@ body {
   width: 100vw;
 }
 
-h2{
+h2 {
   font-size: 28px;
 }
 
-p{
+p {
   font-size: 18px;
 }
 
@@ -34,7 +34,7 @@ p{
   box-shadow: 0px 4px 19px 0px rgba(0, 0, 0, 0.9) inset 50%, 0px 4px 4px 1px rgb(0, 0, 0) 90%;
   backdrop-filter: blur(10px);
   z-index: 9999;
-  height: 15vh;
+  height: 12vh;
 }
 
 .navbar ul {
@@ -236,21 +236,29 @@ p{
   padding: 0 9vw;
 }
 
-.para-full-screen{
+.full-screen {
   max-height: 100vh;
 }
 
-.para h2 {
+.para.full-screen h2 {
   padding-top: 50vh;
-  font-size: 60px;
+  font-size: 42px;
 }
 
-.para p {
-  font-size: 42px;
+.para.full-screen p {
+  font-size: 28px;
   padding-bottom: 50vh;
 }
 
-.para-content{
+.para h2 {
+  padding-top: 30vh;
+}
+
+.para p {
+  padding-bottom: 30vh;
+}
+
+.para-content {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(4, 16, 38, 0.9) 100%);
   backdrop-filter: blur(5px);
   width: 100vw;
@@ -260,31 +268,38 @@ p{
 }
 
 
-.para-content h2{
+.para-content h2 {
   padding-top: 1rem;
   font-size: 28px;
   padding-bottom: 1rem;
 }
 
-.para-content p{
+.para-content p {
   font-size: 18px;
   padding-bottom: 1rem;
 }
 
-.row-6{
-  display: inline-flex;
-  width: 40%;
-  text-align: justify;
+.row-6 {
+  display: block;
+  width: 45%;
+  text-align: left;
   flex-wrap: wrap;
 }
 
-.row-6 span{
+.row-6 h2 {
   display: block;
-  
 }
 
-.left{
+.row-6 p {
+  margin: 0;
+}
+
+.left {
   float: left;
+}
+
+.right {
+  float: right;
 }
 
 video {
@@ -297,11 +312,12 @@ video {
   width: 100vw;
   height: 100vh;
   object-fit: cover;
-  opacity: 0.7;
+  opacity: 0.8;
   z-index: -1;
 }
 
-.content, .para-content {
+.content,
+.para-content {
   padding: 9vh 9vw;
 }
 
@@ -309,8 +325,38 @@ video {
   padding-bottom: 100vh;
 }
 
+/*about section*/
+#about {
+  display: flex;
+  align-items: center;
+  padding: 9vh 9vw;
+  background-color: rgb(47, 83, 84);
+  height: 100vh;
+}
+
+#about .row-6 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#about .left,
+.right {
+  flex-basis: 75%;
+}
+
+#about .right{
+  display: flex;
+  justify-content: flex-end;
+}
+
+#about img {
+  max-height: 75vh;
+  width: 100%;
+  box-shadow: 2px 3px 10px #292931;
+}
+
 /* Image Buttons*/
-section #events {
+#events {
   background: linear-gradient(to bottom, rgba(47, 83, 84), rgba(10, 41, 94));
   background-color: rgb(47, 83, 84);
   color: #fff;
@@ -318,7 +364,6 @@ section #events {
 
 .event-content {
   padding: 9vh 9vw;
-
 }
 
 #events .container {
@@ -347,6 +392,7 @@ section #events {
   height: 100%;
   /*border-top: 2px solid #333;*/
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+  box-shadow: 2px 3px 10px #292931;
   pointer-events: none;
   border-radius: 9px;
 }
@@ -385,11 +431,10 @@ img {
 }
 
 /*Agenda*/
-section #agenda {
+#agenda {
   background: linear-gradient(180deg, rgb(10, 41, 94), rgba(52, 71, 120) 100%);
   background-color: rgb(52, 71, 120);
   color: #fff;
-  padding: 9vh 9vw;
 }
 
 .agenda-container {
@@ -430,13 +475,14 @@ section #agenda {
 }
 
 /*floorplan*/
-section #floorplan {
+#floorplan {
   background: linear-gradient(180deg, rgba(52, 71, 120), rgb(10, 41, 94) 100%);
-  padding-bottom: 18vh;
+  padding-top: 9vh;
+  padding-bottom: 9vh;
 }
 
 #floorplan .container {
-  max-height: 75vh;
+  max-height: 100vh;
   display: flex;
   overflow: hidden;
 }
@@ -483,8 +529,17 @@ section #floorplan {
     margin: -50px 0 0 125px;
   }
 
-  .row-6{
+  .row-6 {
     width: 100%;
+  }
+
+  #about .row-6 {
+    flex-direction: column;
+  }
+
+  #about .left,
+  #about .right {
+    flex-basis: 100%;
   }
 
   .image-box {
@@ -531,11 +586,11 @@ section #floorplan {
     font-size: 28px;
   }
 
-  .para-content h2{
+  .para-content h2 {
     font-size: 36px;
   }
-  
-  .para-content p{
+
+  .para-content p {
     font-size: 20px;
   }
 
@@ -564,8 +619,7 @@ section #floorplan {
 }
 
 /* Center the content */
-.container {
-}
+.container {}
 
 /* Style for the footer heading (logo) */
 .footer-heading a {
@@ -609,5 +663,4 @@ section #floorplan {
 }
 
 /* Style for the copyright text */
-.copyright {
-}
+.copyright {}
