@@ -280,9 +280,9 @@ p {
   float: right;
 }
 
-.row-full{
+.para-content.row-full{
   text-align: left;
-
+  padding: 9vh 20vw
 }
 
 video {
@@ -411,9 +411,8 @@ img {
 
 /*Agenda*/
 #agenda {
-  background: linear-gradient(180deg, rgb(10, 41, 94), rgba(52, 71, 120) 100%);
-  background-color: rgb(52, 71, 120);
   color: #fff;
+  padding-bottom: 6rem;
 }
 
 .agenda-container {
