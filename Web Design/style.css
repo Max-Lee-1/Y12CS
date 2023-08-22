@@ -112,7 +112,6 @@ p {
   padding-left: 6vw;
   text-decoration: none;
   color: #fff;
-  transition: color 0.3s ease;
 }
 
 #menuToggle a:hover {
@@ -128,15 +127,10 @@ p {
   /*follow #menuToggle padding*/
   cursor: pointer;
   opacity: 0;
-  /* hide this */
   z-index: 2;
-  /* and place it over the hamburger */
   -webkit-touch-callout: none;
 }
 
-/*
- * Just a quick hamburger
- */
 #menuToggle span {
   display: block;
   width: 33px;
@@ -149,6 +143,7 @@ p {
   transform-origin: 4px 0px;
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
     background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  border: 1px solid #292931;
 }
 
 #menuToggle span:first-child {
@@ -159,35 +154,21 @@ p {
   transform-origin: 0% 100%;
 }
 
-/* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
 #menuToggle input:checked~span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
   background: #fff;
 }
 
-/*
- * But let's hide the middle one.
- */
 #menuToggle input:checked~span:nth-last-child(3) {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-/*
- * Ohyeah and the last one should go the other direction
- */
 #menuToggle input:checked~span:nth-last-child(2) {
   transform: rotate(-45deg) translate(0, -1px);
 }
 
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
 #menu {
   font-family: 'Barlow condensed', sans-serif;
   position: fixed;
@@ -211,9 +192,6 @@ p {
   font-size: 24px;
 }
 
-/*
- * And let's slide it in from the left
- */
 #menuToggle input:checked~ul {
   transform: none;
 }
@@ -302,6 +280,11 @@ p {
   float: right;
 }
 
+.row-full{
+  text-align: left;
+
+}
+
 video {
   background: linear-gradient(rgba(0, 0, 0, 0.3),
       rgba(0, 0, 0, 0.1));
@@ -325,26 +308,22 @@ video {
   padding-bottom: 100vh;
 }
 
-/*about section*/
+/*About section*/
 #about {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   padding: 9vh 9vw;
   background-color: rgb(47, 83, 84);
-  height: 100vh;
+  min-height: 75vh;
+  max-height: 100vh;
 }
 
-#about .row-6 {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-#about .left,
-.right {
+#about .left {
   flex-basis: 75%;
+  padding-right: 2rem;
 }
 
-#about .right{
+#about .right {
   display: flex;
   justify-content: flex-end;
 }
@@ -476,7 +455,7 @@ img {
 
 /*floorplan*/
 #floorplan {
-  background: linear-gradient(180deg, rgba(52, 71, 120), rgb(10, 41, 94) 100%);
+  background: linear-gradient(180deg, rgb(10, 41, 94), rgba(52, 71, 120));
   padding-top: 9vh;
   padding-bottom: 9vh;
 }
@@ -488,10 +467,54 @@ img {
 }
 
 #floorplan img {
-  max-height: 75vh;
+  max-height: 90vh;
   padding: 9vw;
   object-fit: contain;
   position: relative;
+}
+
+/*Footer Section*/
+.footer-07 {
+  background-color: #292931;
+  color: #ffffff;
+  padding: 60px 0;
+}
+
+.footer-heading a {
+  display: flex;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+  padding: 2vh 2vw;
+}
+
+.menu a:hover {
+  color: #6290e4;
+}
+
+.ftco-footer-social {
+  list-style: none;
+  padding: 0;
+}
+
+.ftco-footer-social li {
+  display: inline-block;
+}
+
+.ftco-footer-social a {
+  color: #ffffff;
+  font-size: 24px;
+  transition: color 0.3s;
+}
+
+.ftco-footer-social a:hover {
+  color: #0a295e;
 }
 
 @media (min-width: 768px) {
@@ -533,7 +556,7 @@ img {
     width: 100%;
   }
 
-  #about .row-6 {
+  #about {
     flex-direction: column;
   }
 
@@ -610,57 +633,3 @@ img {
     flex-basis: calc(33.33% - 40px);
   }
 }
-
-/* Style for the footer section */
-.footer-07 {
-  background-color: #292931;
-  color: #ffffff;
-  padding: 60px 0;
-}
-
-/* Center the content */
-.container {}
-
-/* Style for the footer heading (logo) */
-.footer-heading a {
-  display: flex;
-  color: #fff;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Style for the menu links */
-.menu a {
-  color: #ffffff;
-  text-decoration: none;
-  transition: color 0.3s;
-  padding: 2vh 2vw;
-}
-
-.menu a:hover {
-  color: #6290e4;
-}
-
-/* Style for the social media icons */
-.ftco-footer-social {
-  list-style: none;
-  padding: 0;
-}
-
-.ftco-footer-social li {
-  display: inline-block;
-}
-
-/* Style for the social media icons */
-.ftco-footer-social a {
-  color: #ffffff;
-  font-size: 24px;
-  transition: color 0.3s;
-}
-
-.ftco-footer-social a:hover {
-  color: #0a295e;
-}
-
-/* Style for the copyright text */
-.copyright {}
